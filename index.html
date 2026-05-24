@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexTV IPTV — Televisión sin límites</title>
+<meta name="description" content="NexTV IPTV Chile — Canales de televisión en vivo, series y películas. Planes desde $3.500. Compatible con Smart TV, celular y PC.">
+<meta name="keywords" content="IPTV Chile, canales streaming Chile, televisión online Chile, IPTV Concepción">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080c12;--bg2:#0d1117;--surface:#111827;--border:#1e2d40;--accent:#1a7fd4;--accent2:#0f5fa3;--accent-glow:rgba(26,127,212,0.3);--text:#e6edf3;--text2:#8b9bb4;--text3:#3d4f63;--green:#3fb950}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,12,18,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,45,64,0.5)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:-0.5px}
+.nav-logo span{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--accent2);transform:translateY(-1px)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(26,127,212,0.15) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(26,127,212,0.08) 0%,transparent 50%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(30,45,64,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(30,45,64,0.3) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
+.hero-content{position:relative;max-width:800px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(26,127,212,0.1);border:1px solid rgba(26,127,212,0.3);border-radius:100px;padding:6px 16px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:28px;animation:fadeUp 0.6s ease forwards}
+.hero-badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(63,185,80,0.4)}50%{opacity:0.8;box-shadow:0 0 0 6px rgba(63,185,80,0)}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(42px,8vw,80px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;animation:fadeUp 0.6s 0.1s ease both}
+h1 .highlight{color:var(--accent)}
+.hero-sub{font-size:clamp(16px,2.5vw,20px);color:var(--text2);line-height:1.6;max-width:560px;margin:0 auto 40px;font-weight:300;animation:fadeUp 0.6s 0.2s ease both}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s;box-shadow:0 0 30px var(--accent-glow)}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.stats{display:flex;justify-content:center;gap:48px;margin-top:64px;flex-wrap:wrap;animation:fadeUp 0.6s 0.4s ease both}
+.stat{text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text);letter-spacing:-1px}
+.stat-num span{color:var(--accent)}
+.stat-label{font-size:13px;color:var(--text2);margin-top:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,44px);font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.section-sub{font-size:17px;color:var(--text2);max-width:500px;line-height:1.6;margin-bottom:48px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.2s}
+.feature-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,127,212,0.1)}
+.feature-icon{font-size:28px;margin-bottom:16px}
+.feature-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
+.feature-desc{font-size:14px;color:var(--text2);line-height:1.6}
+.planes-section{padding:80px 24px;background:var(--bg2)}
+.planes-inner{max-width:1000px;margin:0 auto;text-align:center}
+.planes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:48px}
+.plan-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 20px;transition:all 0.2s;position:relative}
+.plan-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.plan-card.popular{border-color:var(--accent);box-shadow:0 0 40px var(--accent-glow)}
+.plan-popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px;white-space:nowrap}
+.plan-duracion{font-size:13px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.plan-precio{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:var(--text);letter-spacing:-1px;margin-bottom:4px}
+.plan-precio-sub{font-size:12px;color:var(--text3);margin-bottom:20px}
+.plan-ahorro{font-size:12px;color:var(--green);font-weight:500;margin-bottom:20px}
+.plan-btn{display:block;width:100%;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s;text-align:center}
+.plan-btn:hover{background:var(--accent2)}
+.plan-btn.outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+.plan-btn.outline:hover{border-color:var(--accent);color:var(--accent)}
+.compat-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.compat-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:14px;font-weight:500}
+.compat-icon{font-size:20px}
+.cta-section{padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(26,127,212,0.12) 0%,transparent 70%)}
+.cta-content{position:relative;max-width:600px;margin:0 auto}
+.cta-title{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+.cta-sub{font-size:17px;color:var(--text2);margin-bottom:36px;line-height:1.6}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:13px;color:var(--text3)}
+footer span{color:var(--accent)}
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;text-decoration:none;transition:all 0.2s;z-index:99;animation:waFloat 3s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.1)!important;animation:none;box-shadow:0 8px 30px rgba(37,211,102,0.5)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Nex<span>TV</span></div>
+  <a href="https://wa.me/56952222772?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20IPTV" target="_blank" class="nav-cta">Contratar ahora</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><div class="hero-badge-dot"></div>Servicio activo 24/7 en Chile</div>
+    <h1>Televisión sin<br><span class="highlight">límites</span></h1>
+    <p class="hero-sub">Miles de canales en vivo, series y películas. Alta definición, sin cortes y compatible con todos tus dispositivos.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20servicio%20IPTV" target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Contratar por WhatsApp
+      </a>
+      <a href="#planes" class="btn-secondary">Ver planes y precios</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">+<span>180</span></div><div class="stat-label">Clientes activos</div></div>
+      <div class="stat"><div class="stat-num"><span>4K</span></div><div class="stat-label">Calidad máxima</div></div>
+      <div class="stat"><div class="stat-num"><span>24</span>/7</div><div class="stat-label">Soporte disponible</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-tag">¿Por qué NexTV?</div>
+    <h2 class="section-title">Todo lo que necesitas<br>en un solo servicio</h2>
+    <p class="section-sub">Sin antenas, sin cables, sin complicaciones. Solo instala y disfruta.</p>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">📺</div><div class="feature-title">Miles de canales</div><div class="feature-desc">Canales nacionales e internacionales en vivo. Deportes, noticias, entretenimiento y más.</div></div>
+      <div class="feature-card"><div class="feature-icon">🎬</div><div class="feature-title">Series y películas</div><div class="feature-desc">Catálogo completo de contenido on-demand. Ve lo que quieras, cuando quieras.</div></div>
+      <div class="feature-card"><div class="feature-icon">⚡</div><div class="feature-title">Sin cortes</div><div class="feature-desc">Servidores estables con alta disponibilidad. Experiencia de visualización fluida.</div></div>
+      <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Todos tus dispositivos</div><div class="feature-desc">Funciona en Smart TV, celular, tablet, PC y más. Una sola cuenta, múltiples pantallas.</div></div>
+      <div class="feature-card"><div class="feature-icon">🇨🇱</div><div class="feature-title">Soporte en Chile</div><div class="feature-desc">Atención por WhatsApp en horario chileno. Respuesta rápida ante cualquier problema.</div></div>
+      <div class="feature-card"><div class="feature-icon">💰</div><div class="feature-title">Precios accesibles</div><div class="feature-desc">Desde $3.500 al mes. Sin contratos largos ni letras chicas. Paga y disfruta.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="planes-section" id="planes">
+  <div class="planes-inner">
+    <div class="section-tag">Planes y precios</div>
+    <h2 class="section-title">Elige tu plan</h2>
+    <p class="section-sub" style="margin:0 auto;">Sin contratos. Paga solo por lo que necesitas.</p>
+    <div class="planes-grid">
+      <div class="plan-card">
+        <div class="plan-duracion">1 mes</div>
+        <div class="plan-precio">$3.500</div>
+        <div class="plan-precio-sub">pago único</div>
+        <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20plan%20de%201%20mes%20por%20%243.500" target="_blank" class="plan-btn outline">Contratar</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-duracion">3 meses</div>
+        <div class="plan-precio">$10.000</div>
+        <div class="plan-precio-sub">$3.333/mes</div>
+        <div class="plan-ahorro">Ahorras $500</div>
+        <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20plan%20de%203%20meses%20por%20%2410.000" target="_blank" class="plan-btn outline">Contratar</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="plan-popular-badge">⭐ Más popular</div>
+        <div class="plan-duracion">6 meses</div>
+        <div class="plan-precio">$20.000</div>
+        <div class="plan-precio-sub">$3.333/mes</div>
+        <div class="plan-ahorro">Ahorras $1.000</div>
+        <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20plan%20de%206%20meses%20por%20%2420.000" target="_blank" class="plan-btn">Contratar</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-duracion">12 meses</div>
+        <div class="plan-precio">$30.000</div>
+        <div class="plan-precio-sub">$2.500/mes</div>
+        <div class="plan-ahorro">Ahorras $12.000</div>
+        <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20plan%20de%2012%20meses%20por%20%2430.000" target="_blank" class="plan-btn outline">Contratar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-tag">Compatibilidad</div>
+    <h2 class="section-title">Funciona en todos<br>tus dispositivos</h2>
+    <p class="section-sub">Compatible con la mayoría de apps y dispositivos del mercado.</p>
+    <div class="compat-grid">
+      <div class="compat-item"><span class="compat-icon">📱</span> Android / iPhone</div>
+      <div class="compat-item"><span class="compat-icon">📺</span> Smart TV</div>
+      <div class="compat-item"><span class="compat-icon">💻</span> PC / Mac</div>
+      <div class="compat-item"><span class="compat-icon">🖥️</span> Android TV Box</div>
+      <div class="compat-item"><span class="compat-icon">🎮</span> Smarters Pro</div>
+      <div class="compat-item"><span class="compat-icon">▶️</span> TiviMate</div>
+      <div class="compat-item"><span class="compat-icon">🌐</span> IPTV Smarters</div>
+      <div class="compat-item"><span class="compat-icon">📡</span> VLC Player</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿Listo para empezar?</h2>
+    <p class="cta-sub">Contáctanos por WhatsApp y te activamos en minutos. Sin complicaciones.</p>
+    <a href="https://wa.me/56952222772?text=Hola,%20quiero%20contratar%20el%20servicio%20IPTV" target="_blank" class="btn-primary" style="font-size:18px;padding:16px 36px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer><p>© 2026 <span>NexTV IPTV</span> — Todos los derechos reservados</p></footer>
+
+<a href="https://wa.me/56952222772?text=Hola,%20quiero%20información%20sobre%20el%20servicio%20IPTV" target="_blank" class="wa-float">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
